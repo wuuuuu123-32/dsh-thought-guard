@@ -1,0 +1,5 @@
+# dsh-thought-guard 的 bundle 层：把自己这一行插进 profile 的插件图。
+# id 保持稳定，方便重复安装 / 覆盖配置。
+- insert:
+    - id: thought-guard
+      name: dsh-thought-guard

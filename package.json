@@ -1,0 +1,49 @@
+{
+  "name": "dsh-thought-guard",
+  "version": "0.1.0",
+  "description": "拦掉中转站模型写进正文的思考标签（<thought> / <thinking>）：注册 llm/stream 瀑布，只对指定 provider 生效，闭合标签块整段剥离，未闭合时整轮不发（fail-closed）。",
+  "type": "module",
+  "license": "MIT",
+  "author": "wuuuuu123-32",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuuuuu123-32/dsh-thought-guard.git"
+  },
+  "homepage": "https://github.com/wuuuuu123-32/dsh-thought-guard#readme",
+  "bugs": {
+    "url": "https://github.com/wuuuuu123-32/dsh-thought-guard/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "llm",
+    "thinking",
+    "thought",
+    "sanitize"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./filter": "./lib/filter.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
