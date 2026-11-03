@@ -1,7 +1,7 @@
 {
   "name": "dsh-thought-guard",
-  "version": "0.1.0",
-  "description": "拦掉中转站模型写进正文的思考标签（<thought> / <thinking>）：注册 llm/stream 瀑布，只对指定 provider 生效，闭合标签块整段剥离，未闭合时整轮不发（fail-closed）。",
+  "version": "0.1.1",
+  "description": "拦掉中转站模型写进正文的思考标签（<thought> / <thinking>）：注册 llm/stream 瀑布，只对指定 provider 生效，闭合块整段剥离，未闭合时摘标签放行，中段短块按引用保留。",
   "type": "module",
   "license": "MIT",
   "author": "wuuuuu123-32",
@@ -33,6 +33,7 @@
     "lib/",
     "cordis.patch.yml",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
